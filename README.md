@@ -73,7 +73,7 @@ npx @sentry/wizard@latest -i nextjs
 -   [x] 'taint' (server-only)
 -   [x] Use Next/Image
 -   [x] Error management (w/ Sentry)
--   [ ] Routing/image page (parallel route)
+-   [x] Routing/image page (parallel route)
 -   [ ] Delete button (w/ Server actions
 -   [ ] Analytics (posthog)
 -   [ ] Ratelimiting (upstash)
