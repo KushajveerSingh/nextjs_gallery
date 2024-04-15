@@ -50,6 +50,17 @@ pnpm add server-only
 
 for next/image add the hostname to next.config.js. This ensures that client cannot modify the code and use images from other sources, and we waste our resources optimizing them as well.
 
+add sentry support. sentry currently does not support turbo, so remove --turbo from the dev command.
+create account on sentry
+create project -> next.js, I'll create my own alerts later
+npx @sentry/wizard@latest -i nextjs
+
+    - sentry saas (sentry.io)
+    - Yes - route sentry requests in the browser through nextjs to avoid ad blockers
+    - Yes - Do you want to create an example page to test your sentry setup
+    - Yes - Are you using a CI/CD tool to build and deploy your application
+    - copy the auth token to .env and vercel
+
 ## TODO
 
 -   [x] Make it deploy (vercel)
@@ -61,7 +72,7 @@ for next/image add the hostname to next.config.js. This ensures that client cann
 -   [x] Add image upload
 -   [x] 'taint' (server-only)
 -   [x] Use Next/Image
--   [ ] Error management (w/ Sentry)
+-   [x] Error management (w/ Sentry)
 -   [ ] Routing/image page (parallel route)
 -   [ ] Delete button (w/ Server actions
 -   [ ] Analytics (posthog)
