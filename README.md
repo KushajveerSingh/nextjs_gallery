@@ -20,6 +20,8 @@ pnpm create t3-app@latest
     -   Yes to pnpm install
     -   ~/ as the import alias
 
+open a typescript file, and type Ctrl-Shift-P and select 'TypeScript: Select TypeScript Version' and select the one from your workspace, and this will provide all the nextjs bindings as well. (or add "typescript.tsdk": "node_modules/typescript/lib" to vscode settings.json)
+
 ignore typescript build errors, eslint build errors in next.config.js to make vercel build faster
 push repo to github
 add the project to vercel
@@ -31,6 +33,8 @@ add storage to vercel by going to storage -> create a database -> postgres
 copy .env.local from storage to your .env file
 pnpm install @vercel/postgres
 setup src/server/db/index.js for the drizzle integration
+
+Problem: When initally testing the database on the deployed url, you will notice that making changes to database are not reflected in the deployment. This is becauase vercel caches the page, and you need to tell vercel that the page is dynamic by adding `export const dynamic = 'force-dynamic';`.
 
 ## TODO
 
