@@ -45,6 +45,9 @@ goto uploadthing, copy api keys to env file and to vercel
 pnpm add uploadthing @uploadthing/react
 create src/app/api/uploadthing files
 
+currently, all your queries are spread throughout the codebase, which can be a problem as you want experts to write those functions, and handle security. So create src/server/queries.ts and put all your queries in that. taint is a feature of react, where it gurantees that the data is not sent to the client. Like when you make a database call, and want to gurantee that the password is not sent to the client, use taint.
+pnpm add server-only
+
 ## TODO
 
 -   [x] Make it deploy (vercel)
@@ -54,7 +57,7 @@ create src/app/api/uploadthing files
 -   [x] Attach database to ui
 -   [x] Add authentication (w/ clerk)
 -   [x] Add image upload
--   [ ] 'taint' (server-only)
+-   [x] 'taint' (server-only)
 -   [ ] Use Next/Image
 -   [ ] Error management (w/ Sentry)
 -   [ ] Routing/image page (parallel route)
