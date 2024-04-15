@@ -41,6 +41,10 @@ create src/middleware.ts
 goto clerk website, create application (choose email, username, google), copy the env variables
 add these env variables to vercel as well
 
+goto uploadthing, copy api keys to env file and to vercel
+pnpm add uploadthing @uploadthing/react
+create src/app/api/uploadthing files
+
 ## TODO
 
 -   [x] Make it deploy (vercel)
@@ -49,8 +53,9 @@ add these env variables to vercel as well
 -   [x] Set up database (vercel postgres)
 -   [x] Attach database to ui
 -   [x] Add authentication (w/ clerk)
--   [ ] Add image upload
+-   [x] Add image upload
 -   [ ] 'taint' (server-only)
+-   [ ] Use Next/Image
 -   [ ] Error management (w/ Sentry)
 -   [ ] Routing/image page (parallel route)
 -   [ ] Delete button (w/ Server actions
