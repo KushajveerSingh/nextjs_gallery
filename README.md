@@ -36,6 +36,11 @@ setup src/server/db/index.js for the drizzle integration
 
 Problem: When initally testing the database on the deployed url, you will notice that making changes to database are not reflected in the deployment. This is becauase vercel caches the page, and you need to tell vercel that the page is dynamic by adding `export const dynamic = 'force-dynamic';`.
 
+pnpm add @clerk/nextjs@beta (to get v5)
+create src/middleware.ts
+goto clerk website, create application (choose email, username, google), copy the env variables
+add these env variables to vercel as well
+
 ## TODO
 
 -   [x] Make it deploy (vercel)
@@ -43,8 +48,9 @@ Problem: When initally testing the database on the deployed url, you will notice
 -   [x] Tidy up build process
 -   [x] Set up database (vercel postgres)
 -   [x] Attach database to ui
--   [ ] Add authentication (w/ clerk)
+-   [x] Add authentication (w/ clerk)
 -   [ ] Add image upload
+-   [ ] 'taint' (server-only)
 -   [ ] Error management (w/ Sentry)
 -   [ ] Routing/image page (parallel route)
 -   [ ] Delete button (w/ Server actions
