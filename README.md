@@ -42,7 +42,7 @@ Problem: When initally testing the database on the deployed url, you will notice
 -   [x] Scaffold basic ui with mock data
 -   [x] Tidy up build process
 -   [x] Set up database (vercel postgres)
--   [ ] Attach database to ui
+-   [x] Attach database to ui
 -   [ ] Add authentication (w/ clerk)
 -   [ ] Add image upload
 -   [ ] Error management (w/ Sentry)
