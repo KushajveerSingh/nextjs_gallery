@@ -1,9 +1,14 @@
 # nextjs_gallery (WIP)
 
 pnpm dev - for nextjs dev server
+git add -p - to preview changes before commit
 
 corepack enable pnpm
 pnpm create t3-app@latest
+
+push repo to github
+add the project to vercel
+goto uploadthing.com and create a project, and upload dummy image files to it
 
 -   nextjs_gallery
 -   TypeScript
@@ -19,8 +24,9 @@ pnpm create t3-app@latest
 
 ## TODO
 
--   [ ] Make it deploy (vercel)
--   [ ] Scaffold basic ui with mock data
+-   [x] Make it deploy (vercel)
+-   [x] Scaffold basic ui with mock data
+-   [ ] Tidy up build process
 -   [ ] Set up database (vercel postgres)
 -   [ ] Attach database to ui
 -   [ ] Add authentication (w/ clerk)
