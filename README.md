@@ -102,6 +102,8 @@ create account -> reddis -> create database
 pnpm add @upstash/ratelimit @upstash/redis
 create src/server/ratelimit.ts
 
+in clerk, select your user and add private data 'can-upload': true
+
 ## TODO
 
 -   [x] Make it deploy (vercel)
@@ -119,4 +121,4 @@ create src/server/ratelimit.ts
 -   [x] Analytics (posthog)
 -   [x] Delete button (w/ Server actions)
 -   [x] Ratelimiting (upstash)
--   [ ] Restrict users that can upload
+-   [x] Restrict users that can upload

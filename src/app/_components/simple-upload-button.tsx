@@ -84,9 +84,11 @@ export function SimpleUploadButton() {
       );
     },
     onUploadError(error) {
+      const error_message = error.message;
+
       posthog.capture('Upload Error', { error });
       toast.dismiss('upload-begin');
-      toast.error('Upload failed. Only 2 uploads allowed every 100 seconds.');
+      toast.error(`Upload failed. ${error_message}`);
     },
     onClientUploadComplete() {
       toast.dismiss('upload-begin');
