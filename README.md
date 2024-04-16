@@ -88,6 +88,10 @@ add it to app/src/layout.tsx, and then play around the site, and verify in posth
 in the posthog page, click skip for now on the payment page, and then finish (on invite teammates page)
 Follow framework guide at posthog to setup analytics even with ad-blocker https://posthog.com/docs/libraries/next-js
 
+Add analytics to delete button
+pnpm add posthog-node
+create src/server/analytics.ts
+
 ## TODO
 
 -   [x] Make it deploy (vercel)
@@ -103,5 +107,5 @@ Follow framework guide at posthog to setup analytics even with ad-blocker https:
 -   [x] Routing/image page (parallel route)
 -   [x] Add shadcn toast
 -   [x] Analytics (posthog)
--   [ ] Delete button (w/ Server actions)
+-   [x] Delete button (w/ Server actions)
 -   [ ] Ratelimiting (upstash)
