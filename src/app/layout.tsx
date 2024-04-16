@@ -7,6 +7,7 @@ import TopNav from './_components/topnav';
 import { NextSSRPlugin } from '@uploadthing/react/next-ssr-plugin';
 import { extractRouterConfig } from 'uploadthing/server';
 import { ourFileRouter } from './api/uploadthing/core';
+import { Toaster } from '~/components/ui/sonner';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -29,7 +30,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang='en'>
-        <body className={`font-sans ${inter.variable}`}>
+        <body className={`font-sans ${inter.variable} dark`}>
           <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
           <div className='grid h-screen grid-rows-[auto,1fr]'>
             <TopNav />
@@ -37,6 +38,7 @@ export default function RootLayout({
           </div>
           {modal}
           <div id='modal-root' />
+          <Toaster />
         </body>
       </html>
     </ClerkProvider>

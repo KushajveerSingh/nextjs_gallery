@@ -61,6 +61,22 @@ npx @sentry/wizard@latest -i nextjs
     - Yes - Are you using a CI/CD tool to build and deploy your application
     - copy the auth token to .env and vercel
 
+npx shadcn-ui@latest init
+
+Tip: For quickly testing out certain component things, you can move the logic to a separate component, and add it to window. Then you can call it from console as window.makeToast().
+
+    ```tsx
+    function makeUploadToast() {
+        return toast(
+            <div>
+            <LoadingSpinnerSVG /> Uploading...
+            </div>,
+            { duration: 100000, id: 'upload-begin' },
+        );
+    }
+    window.makeToast = makeUploadToast;
+    ```
+
 ## TODO
 
 -   [x] Make it deploy (vercel)
@@ -74,6 +90,7 @@ npx @sentry/wizard@latest -i nextjs
 -   [x] Use Next/Image
 -   [x] Error management (w/ Sentry)
 -   [x] Routing/image page (parallel route)
--   [ ] Delete button (w/ Server actions
+-   [x] Add shadcn toast
+-   [ ] Delete button (w/ Server actions)
 -   [ ] Analytics (posthog)
 -   [ ] Ratelimiting (upstash)
