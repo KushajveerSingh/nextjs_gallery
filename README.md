@@ -77,6 +77,17 @@ Tip: For quickly testing out certain component things, you can move the logic to
     window.makeToast = makeUploadToast;
     ```
 
+goto posthog and create an account
+when creating a new account/organization, it would create a 'Default project'. Delete that from the settings.
+Then create a new project.
+Goto Product analytics -> Next.js
+pnpm add posthog-js
+copy env variables to .env and vercel
+create src/app/\_analytics/providers.tsx
+add it to app/src/layout.tsx, and then play around the site, and verify in posthog if the evenets are registerd. (I had to disable ad blocker for this to work).
+in the posthog page, click skip for now on the payment page, and then finish (on invite teammates page)
+Follow framework guide at posthog to setup analytics even with ad-blocker https://posthog.com/docs/libraries/next-js
+
 ## TODO
 
 -   [x] Make it deploy (vercel)
@@ -91,6 +102,6 @@ Tip: For quickly testing out certain component things, you can move the logic to
 -   [x] Error management (w/ Sentry)
 -   [x] Routing/image page (parallel route)
 -   [x] Add shadcn toast
+-   [x] Analytics (posthog)
 -   [ ] Delete button (w/ Server actions)
--   [ ] Analytics (posthog)
 -   [ ] Ratelimiting (upstash)
