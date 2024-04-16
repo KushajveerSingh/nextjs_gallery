@@ -83,6 +83,11 @@ export function SimpleUploadButton() {
         { duration: 100000, id: 'upload-begin' },
       );
     },
+    onUploadError(error) {
+      posthog.capture('Upload Error', { error });
+      toast.dismiss('upload-begin');
+      toast.error('Upload failed. Only 2 uploads allowed every 100 seconds.');
+    },
     onClientUploadComplete() {
       toast.dismiss('upload-begin');
       toast('Upload complete!');

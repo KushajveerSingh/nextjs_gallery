@@ -92,6 +92,16 @@ Add analytics to delete button
 pnpm add posthog-node
 create src/server/analytics.ts
 
+use upstash for rate limiting
+create account -> reddis -> create database
+
+    - select regional
+    - enable eviction
+    - Choose Node under connect to your database and then under REST API choose .env and copy these to vercel
+
+pnpm add @upstash/ratelimit @upstash/redis
+create src/server/ratelimit.ts
+
 ## TODO
 
 -   [x] Make it deploy (vercel)
@@ -108,4 +118,5 @@ create src/server/analytics.ts
 -   [x] Add shadcn toast
 -   [x] Analytics (posthog)
 -   [x] Delete button (w/ Server actions)
--   [ ] Ratelimiting (upstash)
+-   [x] Ratelimiting (upstash)
+-   [ ] Restrict users that can upload
